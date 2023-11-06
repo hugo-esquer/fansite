@@ -1,0 +1,92 @@
+/**-----------------------------------HOME------------------------------------*/
+
+.body-home{
+    background-image: url(images/guts-fond.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+a:hover {
+	color: white;
+	background-color: rgba(105, 105, 105, 0.402);
+	transition: 0.5s;
+}
+
+header{
+    display: flex;
+    justify-content: space-between;
+}
+
+header h1{
+    font-size: 2em;
+}
+
+header li{
+    font-size: 1.3em;
+}
+
+header a{
+    text-decoration: none;
+    color: black;
+    padding: 5px 10px;
+}
+
+nav{
+    display: flex;
+	align-items: center;
+}
+
+.menu-header li{
+    display: inline-block;
+}
+
+.main-home{
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.sec-home{
+    text-align: center;
+}
+
+.sec-home p, a{
+    color: aliceblue;
+}
+
+.sec-home a{
+    text-decoration: none;
+    font-size: 5em;
+}
+
+/*--------------------------------A propos----------------------------------*/
+.body{
+    background: rgb(0,0,0);
+    background: linear-gradient(20deg, #99D4C0, #DBD46A);
+    min-height: 100vh;
+}
+
+/*-------------------------------Discographie-------------------------------*/
+
+#discographie{
+    text-align: center;
+    font-size: 3em;
+}
+
+#body-disco{
+    background-image: url(images/guts-fond-bleu.avif);
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.sec-discographie{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.sec-discographie img{
+    width: 300px;
+    object-fit: cover;
+}
