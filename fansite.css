@@ -41,7 +41,7 @@ nav{
 }
 
 .main-home{
-    height: 73vh;
+    min-height: 80vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -176,6 +176,100 @@ nav{
     -webkit-transform: scale(1.2);
     transform: scale(1.2);
 }
+
+/*----------------------media------------------------*/
+
+/*-----------gallery photo-------------*/
+#gallery {
+    display: grid;
+    place-items: center;
+    min-height: 80vh;
+}
+
+#gallery ul {
+    display: flex;
+    width: calc(80% - 2rem);
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+}
+
+#gallery li {
+    padding: 0;
+}
+
+#gallery img {
+    max-width: 100%;
+    width: 100%;
+    object-fit: cover;
+    transition: all 0.2s ease;
+}
+
+#gallery ul:is(:hover, :focus-within) img {
+    filter: grayscale(calc(1 - var(--active-lerp, 0)));
+}
+
+:root {
+    --lerp-0: 1;
+    --lerp-1: 0.5787037;
+    --lerp-2: 0.2962963;
+    --lerp-3: 0.125;
+    --lerp-4: 0.037037;
+    --lerp-5: 0.0046296;
+    --lerp-6: 0;
+}
+
+#gallery a {
+    outline-offset: 4px;
+}
+
+#gallery li {
+    flex: calc(0.1 + (var(--active-lerp, 0) * 1));
+    transition: flex 0.2s ease;
+}
+
+#gallery li:is(:hover, :focus-within) {
+    --active-lerp: var(--lerp-0);
+    z-index: 7;
+}
+
+#gallery li:has(+ li:is(:hover, :focus-within)),
+li:is(:hover, :focus-within)+li {
+    --active-lerp: var(--lerp-1);
+    z-index: 6;
+}
+
+#gallery li:has(+ li + li:is(:hover, :focus-within)),
+li:is(:hover, :focus-within)+li+li {
+    --active-lerp: var(--lerp-2);
+    z-index: 5;
+}
+
+#gallery li:has(+ li + li + li:is(:hover, :focus-within)),
+li:is(:hover, :focus-within)+li+li+li {
+    --active-lerp: var(--lerp-3);
+    z-index: 4;
+}
+
+#gallery li:has(+ li + li + li + li:is(:hover, :focus-within)),
+li:is(:hover, :focus-within)+li+li+li+li {
+    --active-lerp: var(--lerp-4);
+    z-index: 3;
+}
+
+#gallery li:has(+ li + li + li + li + li:is(:hover, :focus-within)),
+li:is(:hover, :focus-within)+li+li+li+li+li {
+    --active-lerp: var(--lerp-5);
+    z-index: 2;
+}
+
+#gallery li:has(+ li + li + li + li + li + li:is(:hover, :focus-within)),
+li:is(:hover, :focus-within)+li+li+li+li+li+li {
+    --active-lerp: var(--lerp-6);
+    z-index: 1;
+}
+
+/*-------------------fin de la galerie photo-----------------*/
 
 
 /*---------------------footer------------------------*/
