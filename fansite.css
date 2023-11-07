@@ -41,7 +41,7 @@ nav{
 }
 
 .main-home{
-    height: 80vh;
+    height: 73vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -67,7 +67,26 @@ nav{
     min-height: 100vh;
 }
 
+#portrait{
+    width: 450px;
+}
+
 /*-------------------------------Discographie-------------------------------*/
+
+.intro-disco{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.intro-disco p{
+    text-align: center;
+    color: #fff;
+    margin: 0 10%;
+    background-color: #33333360;
+    border-radius: 10px;
+}
+
 
 #discographie{
     text-align: center;
@@ -80,6 +99,9 @@ nav{
     background-attachment: fixed;
 }
 
+.box{
+    margin: 3vw;
+}
 .sec-discographie{
     display: flex;
     flex-wrap: wrap;
@@ -90,7 +112,7 @@ nav{
     width: 300px;
     object-fit: cover;
 }
-
+/*-----Pop-up-----*/
 .overlay {
     position: fixed;
     top: 0;
@@ -113,7 +135,7 @@ nav{
     padding: 20px;
     background: linear-gradient(20deg, #99D4C0, #DBD46A);
     border-radius: 5px;
-    width: 35%;
+    width: 40%;
     position: relative;
     transition: all 5s ease-in-out;
 }
@@ -142,4 +164,31 @@ nav{
 .popup .content {
     max-height: 30%;
     overflow: auto;
+}
+/*--------fin du pop-up--------*/
+
+.image{
+    transition: transform .1s;
+}
+
+.image:hover{
+    -ms-transform: scale(1.2);
+    -webkit-transform: scale(1.2);
+    transform: scale(1.2);
+}
+
+
+/*---------------------footer------------------------*/
+footer{
+    display: flex;
+    justify-content: center;
+}
+
+footer a{
+    text-decoration: none;
+}
+
+footer li{
+    display: inline-block;
+    padding: 0 15px;
 }
