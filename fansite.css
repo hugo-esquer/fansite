@@ -486,7 +486,7 @@ li:is(:hover, :focus-within)+li+li+li+li+li+li {
         grid-row-gap: 0;
         grid-template-columns: 1fr 1fr;
         grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
-        width: 60%;
+        width: 75%;
     }
 
     .grid-row label {
